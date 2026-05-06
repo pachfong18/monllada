@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Monllada - Quiz</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#d3c4b7",
+                        "surface-tint": "#5e5e5c",
+                        "surface": "#fcf9f1",
+                        "surface-dim": "#dddad2",
+                        "tertiary-fixed": "#f0e0d2",
+                        "tertiary-container": "#fffaf9",
+                        "on-surface-variant": "#454742",
+                        "inverse-primary": "#c8c6c3",
+                        "primary-fixed-dim": "#c8c6c3",
+                        "surface-bright": "#fcf9f1",
+                        "on-tertiary-container": "#7e7166",
+                        "surface-container-highest": "#e5e2da",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1c1c17",
+                        "inverse-on-surface": "#f4f0e8",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#31312b",
+                        "surface-container-low": "#f7f3eb",
+                        "background": "#fcf9f1",
+                        "secondary": "#5f5e5e",
+                        "primary-fixed": "#e4e2de",
+                        "on-tertiary-fixed-variant": "#4f453b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#685c52",
+                        "on-secondary": "#ffffff",
+                        "outline": "#767872",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e4e2e1",
+                        "surface-container-high": "#ebe8e0",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-background": "#1c1c17",
+                        "surface-variant": "#e5e2da",
+                        "primary-container": "#fdfbf7",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "on-primary-container": "#747471",
+                        "primary": "#5e5e5c",
+                        "on-primary-fixed": "#1b1c1a",
+                        "on-secondary-container": "#656464",
+                        "on-primary-fixed-variant": "#474744",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#221a12",
+                        "outline-variant": "#c6c7c0",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-container": "#f1eee6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "stack-sm": "8px",
+                        "unit": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "margin-page": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Noto Serif"],
+                        "label-caps": ["Inter"],
+                        "h3": ["Noto Serif"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "ui-button": ["Inter"],
+                        "h2": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "h3": ["24px", { "lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "ui-button": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "h2": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface docked full-width top-0 border-b border-outline">
+<div class="flex justify-between items-center w-full px-margin-page py-unit max-w-7xl mx-auto">
+<div class="font-h3 text-h3 font-bold text-on-surface tracking-tight">Monllada</div>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex space-x-gutter items-center">
+<a class="font-ui-button text-ui-button text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="letter.html">Our Story</a>
+<a class="font-ui-button text-ui-button text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="quiz.html">Quiz</a>
+<a class="font-ui-button text-ui-button text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer active:opacity-70" href="coupons.html">Coupons</a>
+</nav>
+<div class="flex items-center space-x-unit">
+<button class="flex items-center justify-center p-unit text-primary hover:text-on-surface transition-colors duration-300 cursor-pointer active:opacity-70 focus:outline-none">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content: Minimalist Quiz -->
+<main class="flex-grow flex flex-col items-center justify-center py-section-gap px-margin-page w-full max-w-7xl mx-auto">
+<div class="w-full max-w-xl flex flex-col items-center">
+<!-- Context / Eyebrow -->
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-stack-md uppercase tracking-widest opacity-80">Trivia</span>
+<!-- Question -->
+<h1 class="font-h2 text-h2 text-on-surface mb-stack-lg text-center tracking-tight leading-tight">
+                Where did they share their first quiet moment together?
+            </h1>
+<!-- Answer Options -->
+<div class="w-full flex flex-col space-y-stack-md mt-stack-md">
+<!-- Option 1: Standard Hover State -->
+<button class="group w-full py-stack-md px-stack-lg border border-outline bg-surface text-on-surface font-body-lg text-body-lg rounded-full transition-all duration-300 hover:bg-surface-variant hover:border-on-surface focus:outline-none focus:ring-1 focus:ring-on-surface text-center flex items-center justify-center">
+<span class="transition-transform duration-300 group-hover:scale-[0.98]">The Conservatory</span>
+</button>
+<!-- Option 2: Standard Hover State -->
+<button class="group w-full py-stack-md px-stack-lg border border-outline bg-surface text-on-surface font-body-lg text-body-lg rounded-full transition-all duration-300 hover:bg-surface-variant hover:border-on-surface focus:outline-none focus:ring-1 focus:ring-on-surface text-center flex items-center justify-center">
+<span class="transition-transform duration-300 group-hover:scale-[0.98]">A Late-Night Diner</span>
+</button>
+<!-- Option 3: Standard Hover State -->
+<button class="group w-full py-stack-md px-stack-lg border border-outline bg-surface text-on-surface font-body-lg text-body-lg rounded-full transition-all duration-300 hover:bg-surface-variant hover:border-on-surface focus:outline-none focus:ring-1 focus:ring-on-surface text-center flex items-center justify-center">
+<span class="transition-transform duration-300 group-hover:scale-[0.98]">The Central Library</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface full-width border-t border-outline mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-page py-stack-lg max-w-7xl mx-auto">
+<div class="font-label-caps text-label-caps text-on-surface mb-stack-md md:mb-0 opacity-80">
+                Â© 2024 Monllada. Designed for the moment.
+            </div>
+<div class="flex space-x-gutter">
+<a class="font-label-caps text-label-caps text-on-secondary-container hover:text-primary transition-colors duration-300" href="#">Privacy</a>
+<a class="font-label-caps text-label-caps text-on-secondary-container hover:text-primary transition-colors duration-300" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

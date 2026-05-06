@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Happy Birthday, Monllada</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#656464",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c6c7c0",
+                        "surface-tint": "#5e5e5c",
+                        "primary": "#5e5e5c",
+                        "secondary": "#5f5e5e",
+                        "surface-container-highest": "#e5e2da",
+                        "tertiary-fixed": "#f0e0d2",
+                        "tertiary": "#685c52",
+                        "surface-bright": "#fcf9f1",
+                        "on-surface": "#1c1c17",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-container": "#f1eee6",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#474744",
+                        "surface-container-low": "#f7f3eb",
+                        "primary-fixed-dim": "#c8c6c3",
+                        "on-background": "#1c1c17",
+                        "tertiary-container": "#fffaf9",
+                        "on-tertiary-container": "#7e7166",
+                        "surface": "#fcf9f1",
+                        "on-tertiary-fixed-variant": "#4f453b",
+                        "primary-container": "#fdfbf7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#d3c4b7",
+                        "on-primary-fixed": "#1b1c1a",
+                        "surface-container-high": "#ebe8e0",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f4f0e8",
+                        "inverse-primary": "#c8c6c3",
+                        "inverse-surface": "#31312b",
+                        "background": "#fcf9f1",
+                        "secondary-container": "#e4e2e1",
+                        "surface-dim": "#dddad2",
+                        "on-error-container": "#93000a",
+                        "outline": "#767872",
+                        "surface-variant": "#e5e2da",
+                        "on-primary-container": "#747471",
+                        "on-tertiary-fixed": "#221a12",
+                        "on-surface-variant": "#454742",
+                        "primary-fixed": "#e4e2de",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#e4e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "margin-page": "64px",
+                        "stack-sm": "8px",
+                        "unit": "8px",
+                        "stack-lg": "32px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Noto Serif"],
+                        "ui-button": ["Inter"],
+                        "h2": ["Noto Serif"],
+                        "body-lg": ["Inter"],
+                        "h1": ["Noto Serif"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", { "lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "ui-button": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "h2": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "h1": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .gift-box-wobble:hover {
+            animation: wobble 0.5s ease-in-out infinite;
+        }
+        @keyframes wobble {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+        .reveal-text {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .is-open .reveal-text {
+            opacity: 1;
+        }
+        .is-open .lid {
+            transform: translateY(-10px) rotate(-10deg);
+            transition: transform 0.8s ease;
+        }
+        .lid {
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-primary-container text-on-surface font-body-md min-h-screen flex flex-col selection:bg-surface-dim selection:text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface w-full z-50 docked full-width top-0 border-b border-outline dark:border-outline-variant flat no shadows">
+<div class="flex justify-between items-center w-full px-margin-page py-unit max-w-7xl mx-auto">
+<a href="index.html" class="font-h3 text-h3 font-bold text-on-surface dark:text-on-surface">Monllada</a>
+<nav class="hidden md:flex items-center space-x-gutter">
+<a class="font-h2 text-h2 font-ui-button text-ui-button text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity duration-300 active:opacity-70" href="letter.html">Our Story</a>
+<a class="font-h2 text-h2 font-ui-button text-ui-button text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity duration-300 active:opacity-70" href="quiz.html">Quiz</a>
+<a class="font-h2 text-h2 font-ui-button text-ui-button text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-pointer transition-opacity duration-300 active:opacity-70" href="coupons.html">Coupons</a>
+</nav>
+<div class="flex items-center">
+<button class="text-primary dark:text-primary hover:text-tertiary transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-size: 24px;">calendar_today</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content: Minimalist Hero -->
+<main class="flex-grow flex flex-col justify-center items-center px-margin-page py-section-gap">
+<div class="max-w-3xl w-full text-center flex flex-col items-center gap-stack-lg" id="gift-interaction">
+<!-- Interactive Gift Box -->
+<div class="relative cursor-pointer group gift-box-wobble" onclick="document.getElementById('gift-interaction').classList.add('is-open')">
+<div class="w-32 h-32 border border-outline rounded flex items-center justify-center relative overflow-hidden bg-surface transition-colors duration-300 group-hover:bg-surface-container-low">
+<!-- Simplistic representation of a box -->
+<div class="lid absolute top-4 w-24 h-6 border-b border-outline z-10 bg-surface"></div>
+<div class="absolute bottom-4 w-24 h-16 border border-outline bg-surface"></div>
+<span class="material-symbols-outlined text-[48px] text-outline absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:text-tertiary transition-colors duration-300">
+                        featured_seasonal_and_gifts
+                    </span>
+</div>
+<div class="mt-stack-sm font-label-caps text-label-caps text-on-surface-variant opacity-70 group-hover:opacity-100 transition-opacity">
+                    Tap to open
+                </div>
+</div>
+<!-- Revealing Message -->
+<div class="reveal-text">
+<h1 class="font-h1 text-h1 text-on-surface tracking-tight">
+                    Happy Birthday, Monllada
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-stack-md max-w-xl mx-auto">
+                    A moment of quiet celebration. Defined by elegance, cherished in stillness.
+                </p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-surface full-width border-t border-outline dark:border-outline-variant flat no shadows mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-page py-stack-lg max-w-7xl mx-auto">
+<div class="font-h3 text-h3 text-on-surface mb-stack-md md:mb-0">
+                Monllada
+            </div>
+<div class="flex items-center space-x-gutter mb-stack-md md:mb-0">
+<a class="font-label-caps text-label-caps text-on-secondary-container hover:text-primary transition-colors duration-300" href="#">Privacy</a>
+<a class="font-label-caps text-label-caps text-on-secondary-container hover:text-primary transition-colors duration-300" href="#">Terms</a>
+</div>
+<div class="font-label-caps text-label-caps text-on-secondary-container">
+                Â© 2024 Monllada. Designed for the moment.
+            </div>
+</div>
+</footer>
+</body></html>
